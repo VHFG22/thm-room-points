@@ -106,7 +106,7 @@ def main():
         markdown_table += f"| {row['Room Name']} | {row['Room URL']} | {row['Points']} | {difficulty_formatted} |\n"
     
     print("Saving results to file...")
-    with open("room_points.md", "w") as f:
+    with open("room_points.md", "w", encoding="utf-8") as f:
         f.write(markdown_table)
     
     print("Results saved to room_points.md")

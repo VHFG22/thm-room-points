@@ -86,12 +86,12 @@ def main(user_id):
         uncompleted.sort(key=lambda x: x.points, reverse=True)
         
         # Write results to files
-        with open('completed_rooms.txt', 'w') as f:
+        with open('completed_rooms.txt', 'w', encoding="utf-8") as f:
             for room in completed:
                 f.write(f"{room.name} | {room.url} | {room.points} | {room.difficulty}\n")
             f.write(f"\nTotal points gained: {total_points_gained}\n")
         
-        with open('rooms_to_complete.txt', 'w') as f:
+        with open('rooms_to_complete.txt', 'w', encoding="utf-8") as f:
             for room in uncompleted:
                 f.write(f"{room.name} | {room.url} | {room.points} | {room.difficulty}\n")
         
